@@ -1,0 +1,24 @@
+---
+
+
+interface Props {
+  /** Variant */
+  variant?: "base" | "dark";
+}
+const collectionData = {};
+const {
+  variant: propVariant = "base"
+} = Astro.props;
+const propText = "Tag";
+if (!["base", "dark"].includes(propVariant)) throw new Error("GTag.variant must be one of: base, dark");
+
+
+---
+<div data-wf-id="8adf685c-89fb-b3a7-9b9f-3d75e43db89d" data-w-id="8adf685c-89fb-b3a7-9b9f-3d75e43db89d" data-wf--g-tag--variant={{"base": "base", "dark": "dark"}[propVariant]} class:list={[{"dark": "w-variant-222271ae-4f38-c5d7-0e68-491db462ac5b"}[propVariant], "tag_wrapper"]} data-wf-variant={["43f6a4f3-4792-a752-d3d7-c5766e1c08c3=" + ({"base": "base", "dark": "222271ae-4f38-c5d7-0e68-491db462ac5b"}[propVariant])].join(" ")}>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 10 10" fill="none" data-wf-id="8adf685c-89fb-b3a7-9b9f-3d75e43db89e" data-w-id="8adf685c-89fb-b3a7-9b9f-3d75e43db89e" class="tag_dot">
+<path d="M8.51966 2.37909L5.50944 0.637943C5.19677 0.454019 4.8044 0.454019 4.49173 0.637943L1.48151 2.37909C1.16884 2.56301 0.972656 2.9002 0.972656 3.26192V6.73808C0.972656 7.0998 1.16884 7.43699 1.48151 7.62091L4.49173 9.36206C4.8044 9.54598 5.19677 9.54598 5.50944 9.36206L8.51966 7.62091C8.83233 7.43699 9.02851 7.0998 9.02851 6.73808V3.26192C9.02851 2.9002 8.83233 2.56301 8.51966 2.37909Z" fill="#E0A458" data-wf-id="8adf685c-89fb-b3a7-9b9f-3d75e43db89f" data-w-id="8adf685c-89fb-b3a7-9b9f-3d75e43db89f"></path>
+</svg>
+<p data-wf-id="8adf685c-89fb-b3a7-9b9f-3d75e43db8a0" data-w-id="8adf685c-89fb-b3a7-9b9f-3d75e43db8a0">
+<slot>{propText}</slot>
+</p>
+</div>

@@ -1,0 +1,63 @@
+---
+import __lumosAsset17 from '@/assets/placeholder.svg?url';
+import { imageUrl } from '@/lib/urls';
+
+
+interface Props {
+  /** Company Logo */
+  companyLogo?: string | { url?: string; alt?: string; id?: string };
+  /** Image */
+  image?: string | { url?: string; alt?: string; id?: string };
+}
+const collectionData = {};
+const {
+  companyLogo: propCompanyLogo = {"id": "plugins/Basic/assets/placeholder.svg"},
+  image: propImage = {"id": "plugins/Basic/assets/placeholder.svg"}
+} = Astro.props;
+const propQuote = "“Lorem ipsum dolor sit amet, consectetur adipiscing elit.”";
+const propDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam cursus lectus elementum nulla porta cursus ut ut justo. Quisque viverra.";
+const propTitle = "Lorem ipsum dolor sit amet.";
+const propStatsDescription = "Lorem Ipsum";
+const propStats = "Lift %+";
+
+
+---
+<div data-slick="slide" data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a596" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a596" class="testimonial-cards">
+<div data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a597" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a597" class="testimonial_img-wrap">
+<img alt={((propImage)?.alt || '') || ''} src={imageUrl(propImage) || (__lumosAsset17)} data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a598" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a598" class="testimonial_img" />
+</div>
+<div data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a599" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a599" class="testimonial_content">
+<div data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a59a" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a59a">
+<div data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a59b" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a59b" class="margin-bottom margin-24">
+<div data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a59c" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a59c" class="testimonial_header">
+<div data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a59d" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a59d">
+<div data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a59e" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a59e" class="margin-bottom margin-4">
+<p data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a59f" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a59f" class="heading-style-h3">
+<slot name="stats">{propStats}</slot>
+</p>
+</div>
+<p data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a5a1" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a5a1" class="text-color-iron">
+<slot name="statsdescription">{propStatsDescription}</slot>
+</p>
+</div>
+<img alt={((propCompanyLogo)?.alt || '') || ''} src={imageUrl(propCompanyLogo) || (__lumosAsset17)} data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a5a3" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a5a3" class="testimonial_icon" />
+</div>
+</div>
+<div data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a5a4" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a5a4" class="margin-bottom margin-10">
+<p data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a5a5" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a5a5" class="heading-style-h5">
+<slot name="title">{propTitle}</slot>
+</p>
+</div>
+<p data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a5a7" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a5a7" class="text-color-iron">
+<slot name="description">{propDescription}</slot>
+</p>
+</div>
+<div data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a5a9" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a5a9" class="testimonial_bottom-block">
+<div data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a5aa" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a5aa" class="testimonial_quote">
+<p data-wf-id="b1e9392f-3b85-aa45-f70d-66fe8627a5ab" data-w-id="b1e9392f-3b85-aa45-f70d-66fe8627a5ab" class="heading-style-h6 text-color-iron">
+<slot name="quote">{propQuote}</slot>
+</p>
+</div>
+</div>
+</div>
+</div>

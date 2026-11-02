@@ -1,0 +1,25 @@
+---
+
+
+interface Props {
+  /** Link */
+  link?: string;
+  linkTarget?: string;
+}
+const collectionData = {};
+const {
+  link: propLink = "#",
+  linkTarget: propLinkTarget = ""
+} = Astro.props;
+const propText = "Link";
+
+
+---
+<a data-wf-id="6de3adbd-7bda-d000-a29f-61cc0129f3a4" data-w-id="6de3adbd-7bda-d000-a29f-61cc0129f3a4" class="link_wrapper w-inline-block" href={propLink} target={propLinkTarget || (undefined)}>
+<p data-wf-id="6de3adbd-7bda-d000-a29f-61cc0129f3a5" data-w-id="6de3adbd-7bda-d000-a29f-61cc0129f3a5">
+<slot>{propText}</slot>
+</p>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 18 18" fill="none" data-wf-id="6de3adbd-7bda-d000-a29f-61cc0129f3a7" data-w-id="6de3adbd-7bda-d000-a29f-61cc0129f3a7" class="link_icon">
+<path d="M14.3459 4.4996V11.8121C14.3459 12.0359 14.257 12.2505 14.0988 12.4087C13.9406 12.567 13.7259 12.6559 13.5022 12.6559C13.2784 12.6559 13.0638 12.567 12.9055 12.4087C12.7473 12.2505 12.6584 12.0359 12.6584 11.8121V6.53867L5.09912 14.0966C4.94061 14.2551 4.72563 14.3441 4.50146 14.3441C4.2773 14.3441 4.06232 14.2551 3.90381 14.0966C3.7453 13.938 3.65625 13.7231 3.65625 13.4989C3.65625 13.2747 3.7453 13.0598 3.90381 12.9012L11.4631 5.34335H6.18967C5.96589 5.34335 5.75128 5.25446 5.59305 5.09622C5.43481 4.93799 5.34592 4.72338 5.34592 4.4996C5.34592 4.27583 5.43481 4.06122 5.59305 3.90298C5.75128 3.74475 5.96589 3.65585 6.18967 3.65585H13.5022C13.7259 3.65585 13.9406 3.74475 14.0988 3.90298C14.257 4.06122 14.3459 4.27583 14.3459 4.4996Z" fill="currentColor" data-wf-id="6de3adbd-7bda-d000-a29f-61cc0129f3a8" data-w-id="6de3adbd-7bda-d000-a29f-61cc0129f3a8"></path>
+</svg>
+</a>

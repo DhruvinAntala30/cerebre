@@ -1,0 +1,86 @@
+---
+import __lumosAsset33 from '@/assets/home/ExxonMobil-logo.avif?url';
+import __lumosAsset11 from '@/assets/contact/Michael.avif?url';
+import { imageUrl } from '@/lib/urls';
+
+
+interface Props {
+  /** Author Image */
+  authorImage?: string | { url?: string; alt?: string; id?: string };
+  /** Company Logo */
+  companyLogo?: string | { url?: string; alt?: string; id?: string };
+}
+const collectionData = {};
+const {
+  authorImage: propAuthorImage = {"id": "6ae309c911b7a64b962e327a"},
+  companyLogo: propCompanyLogo = {"id": "6ae307072f61baa35f665ce5"}
+} = Astro.props;
+const propAuthorDesgination = "Reliability and Maintenance Enterprise Owner, ExxonMobil";
+const propAuthorName = "Michael Honderich";
+const propQuote = "“Cerebre is in the business of scale. You build for the enterprise, not for one-offs.\"";
+const propStat3Description = "Engineers every week";
+const propStat3 = "1000+";
+const propStat2Description = "Schematics";
+const propStat2 = "150,000+";
+const propStat1Description = "Plants modeled";
+const propStat1 = "100+";
+
+
+---
+<div data-slick="slide" data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5eb4" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5eb4" class="trusted-cards">
+<img alt={((propCompanyLogo)?.alt || '') || ''} src={imageUrl(propCompanyLogo) || (__lumosAsset33)} data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5eb5" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5eb5" class="trusted_company-logo" />
+<div data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5eb6" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5eb6" class="trusted_card-content">
+<div data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5eb7" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5eb7" class="trusted_stats-block">
+<div data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5eb8" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5eb8" class="trusted_stats-box">
+<div data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5eb9" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5eb9" class="margin-bottom margin-12">
+<p data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5eba" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5eba" class="heading-style-h4">
+<slot name="stat1">{propStat1}</slot>
+</p>
+</div>
+<p data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ebc" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ebc">
+<slot name="stat1description">{propStat1Description}</slot>
+</p>
+</div>
+<div data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ebe" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ebe" class="stats_divider"></div>
+<div data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ebf" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ebf" class="trusted_stats-box">
+<div data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ec0" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ec0" class="margin-bottom margin-12">
+<p data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ec1" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ec1" class="heading-style-h4">
+<slot name="stat2">{propStat2}</slot>
+</p>
+</div>
+<p data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ec3" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ec3">
+<slot name="stat2description">{propStat2Description}</slot>
+</p>
+</div>
+<div data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ec5" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ec5" class="stats_divider"></div>
+<div data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ec6" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ec6" class="trusted_stats-box">
+<div data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ec7" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ec7" class="margin-bottom margin-12">
+<p data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ec8" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ec8" class="heading-style-h4">
+<slot name="stat3">{propStat3}</slot>
+</p>
+</div>
+<p data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5eca" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5eca">
+<slot name="stat3description">{propStat3Description}</slot>
+</p>
+</div>
+</div>
+<div data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ecc" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ecc" class="margin-bottom margin-16">
+<p data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ecd" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ecd" class="heading-style-h6 text-color-iron">
+<slot name="quote">{propQuote}</slot>
+</p>
+</div>
+<div data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ecf" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ecf" class="trusted_bottom-block">
+<div data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ed0" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ed0" class="trusted_author-block">
+<img alt={((propAuthorImage)?.alt || '') || ''} src={imageUrl(propAuthorImage) || (__lumosAsset11)} data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ed1" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ed1" class="trusted_author-img" />
+<div data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ed2" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ed2">
+<p data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ed3" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ed3" class="body-2 text-color-black">
+<slot name="authorname">{propAuthorName}</slot>
+</p>
+<p data-wf-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ed5" data-w-id="f9a5a8b9-fb9c-c6e8-5118-0fcc6cec5ed5" class="body-4">
+<slot name="authordesgination">{propAuthorDesgination}</slot>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>

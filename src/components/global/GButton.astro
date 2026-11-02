@@ -1,0 +1,41 @@
+---
+
+
+interface Props {
+  /** Link */
+  link?: string;
+  linkTarget?: string;
+  /** Variant */
+  variant?: "primary" | "secondary";
+}
+const collectionData = {};
+const {
+  link: propLink = "#",
+  linkTarget: propLinkTarget = "",
+  variant: propVariant = "primary"
+} = Astro.props;
+const propText = "Button";
+if (!["primary", "secondary"].includes(propVariant)) throw new Error("GButton.variant must be one of: primary, secondary");
+
+
+const __path = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const __cur = (href) => { if (!href || href.startsWith('#')) return false; const h = href.split('#')[0].replace(/\/+$/, '') || '/'; return h === __path; };
+
+---
+<a data-wf-id="0471ad23-2773-7ca0-ee7c-6acae2f92772" data-w-id="0471ad23-2773-7ca0-ee7c-6acae2f92772" data-wf--g-button--variant={{"primary": "primary", "secondary": "secondary"}[propVariant]} class:list={[{"secondary": "w-variant-d8d38a52-8eae-7332-19fa-c2c8fb8846b8"}[propVariant], "button", "w-inline-block", {"w--current": __cur(propLink)}]} aria-current={__cur(propLink) ? "page" : undefined} href={propLink} target={propLinkTarget || (undefined)} data-wf-variant={["b9223e6c-0484-70a5-ad77-80226aa0517a=" + ({"primary": "base", "secondary": "d8d38a52-8eae-7332-19fa-c2c8fb8846b8"}[propVariant])].join(" ")}>
+<div data-wf-id="0471ad23-2773-7ca0-ee7c-6acae2f92773" data-w-id="0471ad23-2773-7ca0-ee7c-6acae2f92773" class:list={[{"secondary": "w-variant-d8d38a52-8eae-7332-19fa-c2c8fb8846b8"}[propVariant], "btn_icon-wrap", "is-left"]}>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 18 18" fill="none" data-wf-id="0471ad23-2773-7ca0-ee7c-6acae2f92774" data-w-id="0471ad23-2773-7ca0-ee7c-6acae2f92774" class="btn_icon">
+<path d="M14.3449 4.4996V11.8121C14.3449 12.0359 14.256 12.2505 14.0978 12.4087C13.9396 12.567 13.725 12.6559 13.5012 12.6559C13.2774 12.6559 13.0628 12.567 12.9046 12.4087C12.7463 12.2505 12.6574 12.0359 12.6574 11.8121V6.53867L5.09814 14.0966C4.93963 14.2551 4.72465 14.3441 4.50049 14.3441C4.27632 14.3441 4.06134 14.2551 3.90283 14.0966C3.74432 13.938 3.65527 13.7231 3.65527 13.4989C3.65527 13.2747 3.74432 13.0598 3.90283 12.9012L11.4621 5.34335H6.18869C5.96491 5.34335 5.7503 5.25446 5.59207 5.09622C5.43383 4.93799 5.34494 4.72338 5.34494 4.4996C5.34494 4.27583 5.43383 4.06122 5.59207 3.90298C5.7503 3.74475 5.96491 3.65585 6.18869 3.65585H13.5012C13.725 3.65585 13.9396 3.74475 14.0978 3.90298C14.256 4.06122 14.3449 4.27583 14.3449 4.4996Z" fill="currentColor" data-wf-id="0471ad23-2773-7ca0-ee7c-6acae2f92775" data-w-id="0471ad23-2773-7ca0-ee7c-6acae2f92775"></path>
+</svg>
+</div>
+<div data-wf-id="0471ad23-2773-7ca0-ee7c-6acae2f92776" data-w-id="0471ad23-2773-7ca0-ee7c-6acae2f92776" class:list={[{"secondary": "w-variant-d8d38a52-8eae-7332-19fa-c2c8fb8846b8"}[propVariant], "btn_text-wrap"]}>
+<p data-wf-id="0471ad23-2773-7ca0-ee7c-6acae2f92777" data-w-id="0471ad23-2773-7ca0-ee7c-6acae2f92777">
+<slot>{propText}</slot>
+</p>
+</div>
+<div data-wf-id="0471ad23-2773-7ca0-ee7c-6acae2f92779" data-w-id="0471ad23-2773-7ca0-ee7c-6acae2f92779" class:list={[{"secondary": "w-variant-d8d38a52-8eae-7332-19fa-c2c8fb8846b8"}[propVariant], "btn_icon-wrap", "is-right"]}>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 18 18" fill="none" data-wf-id="0471ad23-2773-7ca0-ee7c-6acae2f9277a" data-w-id="0471ad23-2773-7ca0-ee7c-6acae2f9277a" class="btn_icon">
+<path d="M14.3449 4.4996V11.8121C14.3449 12.0359 14.256 12.2505 14.0978 12.4087C13.9396 12.567 13.725 12.6559 13.5012 12.6559C13.2774 12.6559 13.0628 12.567 12.9046 12.4087C12.7463 12.2505 12.6574 12.0359 12.6574 11.8121V6.53867L5.09814 14.0966C4.93963 14.2551 4.72465 14.3441 4.50049 14.3441C4.27632 14.3441 4.06134 14.2551 3.90283 14.0966C3.74432 13.938 3.65527 13.7231 3.65527 13.4989C3.65527 13.2747 3.74432 13.0598 3.90283 12.9012L11.4621 5.34335H6.18869C5.96491 5.34335 5.7503 5.25446 5.59207 5.09622C5.43383 4.93799 5.34494 4.72338 5.34494 4.4996C5.34494 4.27583 5.43383 4.06122 5.59207 3.90298C5.7503 3.74475 5.96491 3.65585 6.18869 3.65585H13.5012C13.725 3.65585 13.9396 3.74475 14.0978 3.90298C14.256 4.06122 14.3449 4.27583 14.3449 4.4996Z" fill="currentColor" data-wf-id="0471ad23-2773-7ca0-ee7c-6acae2f9277b" data-w-id="0471ad23-2773-7ca0-ee7c-6acae2f9277b"></path>
+</svg>
+</div>
+</a>

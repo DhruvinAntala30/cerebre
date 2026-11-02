@@ -1,0 +1,21 @@
+---
+import __lumosAsset42 from '@/assets/home/problem-illustration-2.svg?url';
+import { imageUrl } from '@/lib/urls';
+
+
+interface Props {
+  /** Functionality Matcher */
+  functionalityMatcher?: string;
+  /** Image */
+  image?: string | { url?: string; alt?: string; id?: string };
+}
+const collectionData = {};
+const {
+  functionalityMatcher: propFunctionalityMatcher = "1",
+  image: propImage = {"id": "6ae097977bdd365b3fa101d0"}
+} = Astro.props;
+
+
+
+---
+<img alt={((propImage)?.alt || '') || ''} src={imageUrl(propImage) || (__lumosAsset42)} img={propFunctionalityMatcher} data-wf-id="425734c4-8278-c5fe-1c0d-840c1a87d5af" data-w-id="425734c4-8278-c5fe-1c0d-840c1a87d5af" class="problem_svg" />

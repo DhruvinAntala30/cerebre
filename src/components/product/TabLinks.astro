@@ -1,0 +1,45 @@
+---
+import __lumosAsset42 from '@/assets/home/problem-illustration-2.svg?url';
+import { imageUrl } from '@/lib/urls';
+
+
+interface Props {
+  /** Functionality Matcher */
+  functionalityMatcher?: string;
+  /** Tablet Image */
+  tabletImage?: string | { url?: string; alt?: string; id?: string };
+}
+const collectionData = {};
+const {
+  functionalityMatcher: propFunctionalityMatcher = "1",
+  tabletImage: propTabletImage = {"id": "6ae097977bdd365b3fa101d0"}
+} = Astro.props;
+const propDescription = "Description";
+const propTitle = "Title";
+
+
+---
+<div data-wf-id="7091117b-7d23-63f6-cd8c-af4c41c37b04" data-w-id="7091117b-7d23-63f6-cd8c-af4c41c37b04" class="problem_faq-item">
+<div que={propFunctionalityMatcher} data-wf-id="7091117b-7d23-63f6-cd8c-af4c41c37b05" data-w-id="7091117b-7d23-63f6-cd8c-af4c41c37b05" class="problem_faq-que">
+<div data-wf-id="a53ceb1a-1a34-d374-da34-ca98d66775c4" data-w-id="a53ceb1a-1a34-d374-da34-ca98d66775c4" class="problem_icon" name="">
+<slot />
+</div>
+<h3 data-wf-id="7091117b-7d23-63f6-cd8c-af4c41c37b09" data-w-id="7091117b-7d23-63f6-cd8c-af4c41c37b09" class="heading-style-h6 text-color-charcoal">
+<slot name="title">{propTitle}</slot>
+</h3>
+</div>
+<div data-wf-id="7091117b-7d23-63f6-cd8c-af4c41c37b0b" data-w-id="7091117b-7d23-63f6-cd8c-af4c41c37b0b" class="problem_faq-ans">
+<div data-wf-id="7091117b-7d23-63f6-cd8c-af4c41c37b0c" data-w-id="7091117b-7d23-63f6-cd8c-af4c41c37b0c">
+<div data-wf-id="7091117b-7d23-63f6-cd8c-af4c41c37b0d" data-w-id="7091117b-7d23-63f6-cd8c-af4c41c37b0d" class="problem_content-wrap">
+<div data-wf-id="7091117b-7d23-63f6-cd8c-af4c41c37b0e" data-w-id="7091117b-7d23-63f6-cd8c-af4c41c37b0e" class="problem_image-bg">
+<div data-wf-id="7091117b-7d23-63f6-cd8c-af4c41c37b0f" data-w-id="7091117b-7d23-63f6-cd8c-af4c41c37b0f" class="problem_svg-wrap">
+<img alt={((propTabletImage)?.alt || '') || ''} src={imageUrl(propTabletImage) || (__lumosAsset42)} img="2" data-wf-id="7091117b-7d23-63f6-cd8c-af4c41c37b10" data-w-id="7091117b-7d23-63f6-cd8c-af4c41c37b10" class="problem_svg" />
+</div>
+</div>
+<p data-wf-id="7091117b-7d23-63f6-cd8c-af4c41c37b11" data-w-id="7091117b-7d23-63f6-cd8c-af4c41c37b11">
+<slot name="description">{propDescription}</slot>
+</p>
+</div>
+</div>
+</div>
+</div>
