@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "defaultTarget": "github",
+  "githubAccount": "DhruvinAntala30",
+  "hosting": {
+    "provider": "none"
+  },
+  "buildScript": "build",
+  "beforePublish": [],
+  "afterPublish": []
+}
